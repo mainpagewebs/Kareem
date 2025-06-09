@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Prince Kareem | Virtual Coach</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="logo.png" type="image/png" />
+</head>
+<body>
+
+  <!-- HERO SECTION -->
+  <div class="parallax-section">
+    <img src="Profile.png" class="parallax-bg" alt="Prince Kareem" />
+    <div class="parallax-content fade-in">
+      <h1>Prince Kareem</h1>
+      <p>Virtual Coach | Calisthenics | Performance | Power</p>
+    </div>
+  </div>
+
+  <!-- DIVIDER -->
+  <div class="section-divider"><div class="line"></div></div>
+
+  <!-- ABOUT SECTION -->
+  <section id="about" class="fade-in">
+    <h2>About Me</h2>
+    <p>I help athletes and everyday warriors unlock their peak form. No gimmicks, just grind. With a background in calisthenics, boxing, and mindset coaching, I guide you toward true performance through intensity, discipline, and style.</p>
+  </section>
+
+  <!-- DIVIDER -->
+  <div class="section-divider"><div class="line"></div></div>
+
+  <!-- INSTAGRAM SECTION -->
+  <section id="instagram" class="fade-in">
+    <h2>Instagram + Threads</h2>
+    <a href="https://www.instagram.com/princekareem_demigod/" target="_blank" class="button">Instagram</a>
+    <a href="https://www.threads.net/@princekareem_demigod" target="_blank" class="button">Threads</a>
+  </section>
+
+  <!-- DIVIDER -->
+  <div class="section-divider"><div class="line"></div></div>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>© 2025 Prince Kareem — Push Beyond Limits 💯</p>
+  </footer>
+
+  <!-- SCROLL FADE-IN SCRIPT -->
+  <script>
+    const fadeElements = document.querySelectorAll('.fade-in');
+    const dividers = document.querySelectorAll('.section-divider');
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    });
+
+    fadeElements.forEach(el => observer.observe(el));
+    dividers.forEach(el => observer.observe(el));
+  </script>
+</body>
+</html>
